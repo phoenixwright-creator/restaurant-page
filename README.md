@@ -1,2 +1,2 @@
 # restaurant-page
-restuarant page with webpack bundles
+restaurant page with webpack bundles
