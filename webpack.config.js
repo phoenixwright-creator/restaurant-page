@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index.js',
-    loading: './src/loading.js',
+    home: './src/home.js',
+    about: './src/about.js',
+    menu: './src/menu.js',
+    contact: './src/contact.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -13,7 +16,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].restaurant.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
