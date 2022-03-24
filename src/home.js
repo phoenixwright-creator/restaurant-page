@@ -20,26 +20,29 @@ export default function home() {
     
     const headerLinks = document.createElement('div');
     headerLinks.id = 'header-links';
+
+    const homeLink = document.createElement('a');
+    homeLink.rel = 'noopener noreferrer';
+    homeLink.id = 'home';
+    homeLink.innerHTML = 'HOME';
+    headerLinks.appendChild(homeLink);
   
     const aboutLink = document.createElement('a');
-    aboutLink.href = '#';
     aboutLink.rel = 'noopener noreferrer';
     aboutLink.id = 'about';
-    aboutLink.innerHTML = 'About';
+    aboutLink.innerHTML = 'ABOUT';
     headerLinks.appendChild(aboutLink);
   
     const menuLink = document.createElement('a');
-    menuLink.href = '#';
     menuLink.rel = 'noopener noreferrer';
     menuLink.id = 'menu';
-    menuLink.innerHTML = 'Menu';
+    menuLink.innerHTML = 'MENU';
     headerLinks.appendChild(menuLink);
   
     const contactLink = document.createElement('a');
-    contactLink.href = '#';
     contactLink.rel = 'noopener noreferrer';
     contactLink.id = 'contact';
-    contactLink.innerHTML = 'Contact Us';
+    contactLink.innerHTML = 'CONTACT US';
     headerLinks.appendChild(contactLink);
   
     main.appendChild(headerLinks);

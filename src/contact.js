@@ -20,29 +20,75 @@ export default function contact(){
     
     const headerLinks = document.createElement('div');
     headerLinks.id = 'header-links';
+
+    const homeLink = document.createElement('a');
+    homeLink.rel = 'noopener noreferrer';
+    homeLink.id = 'home';
+    homeLink.innerHTML = 'HOME';
+    headerLinks.appendChild(homeLink);
   
     const aboutLink = document.createElement('a');
-    aboutLink.href = '#';
     aboutLink.rel = 'noopener noreferrer';
     aboutLink.id = 'about';
-    aboutLink.innerHTML = 'About';
+    aboutLink.innerHTML = 'ABOUT';
     headerLinks.appendChild(aboutLink);
   
     const menuLink = document.createElement('a');
-    menuLink.href = '#';
     menuLink.rel = 'noopener noreferrer';
     menuLink.id = 'menu';
-    menuLink.innerHTML = 'Menu';
+    menuLink.innerHTML = 'MENU';
     headerLinks.appendChild(menuLink);
   
     const contactLink = document.createElement('a');
-    contactLink.href = '#';
     contactLink.rel = 'noopener noreferrer';
     contactLink.id = 'contact';
-    contactLink.innerHTML = 'Contact Us';
+    contactLink.innerHTML = 'CONTACT US';
     headerLinks.appendChild(contactLink);
-  
+
     main.appendChild(headerLinks);
+
+    const contactTitle = document.createElement('h1');
+    contactTitle.id = 'contact-title';
+    contactTitle.innerHTML = 'How To Contact Us';
+    main.appendChild(contactTitle);
+
+    const contactPara = document.createElement('p');
+    contactPara.id = 'contact-para';
+    contactPara.innerHTML = 'Please fill in this form to send us your request';
+    main.appendChild(contactPara);
+
+    const contactForm = document.createElement('form');
+    contactForm.id = 'contact-form';
+    //contactForm.method = '';
+    //contactForm.action = '';
+    main.appendChild(contactForm);
+
+    const objectLabel = document.createElement('label');
+    objectLabel.htmlFor = 'object';
+    objectLabel.innerHTML = 'Object';
+    contactForm.appendChild(objectLabel);
+
+    const objectInput = document.createElement('input');
+    objectInput.type = 'text';
+    objectInput.id = 'object';
+    objectInput.placeholder = 'Type the object of your message...';
+    contactForm.appendChild(objectInput);
+
+    const messageLabel = document.createElement('label');
+    messageLabel.htmlFor = 'message';
+    messageLabel.innerHTML = 'Your Message';
+    contactForm.appendChild(messageLabel);
+
+    const messageInput = document.createElement('textarea');
+    messageInput.id = 'message';
+    messageInput.placeholder = 'Type your message...';
+    contactForm.appendChild(messageInput);
+
+    const submitBtn = document.createElement('button');
+    submitBtn.type = 'submit';
+    submitBtn.id = 'submit-message';
+    submitBtn.innerHTML = 'Submit Message';
+    contactForm.appendChild(submitBtn);
 
     return main;
 }
