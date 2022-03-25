@@ -1,3 +1,5 @@
+import Logo from './la-cabeza-logo.png';
+
 export default function menu(){
     const main = document.createElement('div');
     main.id = 'main';
@@ -5,10 +7,10 @@ export default function menu(){
     const logoDiv = document.createElement('div');
     logoDiv.id = 'logo-space';
   
-    const logoImg = document.createElement('img');
+    const logoImg = new Image();
     logoImg.alt = 'Logo of the restaurant';
     logoImg.id = 'restaurant-logo';
-    logoImg.src = '../src/la-cabeza-logo.png';
+    logoImg.src = Logo;
     logoDiv.appendChild(logoImg);
   
     const restaurantName = document.createElement('h1');

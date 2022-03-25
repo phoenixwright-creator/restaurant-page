@@ -1,4 +1,5 @@
 import Cooker from './cooker.jpg';
+import Logo from './la-cabeza-logo.png';
 
 export default function about(){
     const main = document.createElement('div');
@@ -7,10 +8,10 @@ export default function about(){
     const logoDiv = document.createElement('div');
     logoDiv.id = 'logo-space';
   
-    const logoImg = document.createElement('img');
+    const logoImg = new Image();
     logoImg.alt = 'Logo of the restaurant';
     logoImg.id = 'restaurant-logo';
-    logoImg.src = '../src/la-cabeza-logo.png';
+    logoImg.src = Logo;
     logoDiv.appendChild(logoImg);
   
     const restaurantName = document.createElement('h1');
