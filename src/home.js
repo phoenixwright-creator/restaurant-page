@@ -1,3 +1,6 @@
+import Logo from './la-cabeza-logo.png';
+import Crepe from './crepe.jpg';
+
 export default function home() {
     const main = document.createElement('div');
     main.id = 'main';
@@ -5,11 +8,11 @@ export default function home() {
     const logoDiv = document.createElement('div');
     logoDiv.id = 'logo-space';
   
-    const logoImg = document.createElement('img');
-    logoImg.alt = 'Logo of the restaurant';
-    logoImg.id = 'restaurant-logo';
-    logoImg.src = '../src/la-cabeza-logo.png';
-    logoDiv.appendChild(logoImg);
+    const myLogo = new Image();
+    myLogo.alt = 'Logo of the restaurant';
+    myLogo.id = 'restaurant-logo';
+    myLogo.src = Logo;
+    logoDiv.appendChild(myLogo);
   
     const restaurantName = document.createElement('h1');
     restaurantName.id = 'restaurant-name';
@@ -47,10 +50,10 @@ export default function home() {
   
     main.appendChild(headerLinks);
   
-    const mainImg = document.createElement('img');
+    const mainImg = new Image();
     mainImg.id = 'main-img';
     mainImg.alt = 'Image of the main meal';
-    mainImg.src = '../src/crepe.jpg';
+    mainImg.src = Crepe;
     main.appendChild(mainImg);
   
     const descPara = document.createElement('h2');

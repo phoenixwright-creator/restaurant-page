@@ -1,3 +1,5 @@
+import Cooker from './cooker.jpg';
+
 export default function about(){
     const main = document.createElement('div');
     main.id = 'main';
@@ -52,10 +54,10 @@ export default function about(){
     title.innerHTML = 'About Us';
     main.appendChild(title);
 
-    const mainImg = document.createElement('img');
+    const mainImg = new Image();
     mainImg.id = 'cooker-img';
     mainImg.alt = 'Image of a cook member cooking creps';
-    mainImg.src = '../src/cooker.jpg';
+    mainImg.src = Cooker;
     main.appendChild(mainImg);
 
     const para = document.createElement('p');
