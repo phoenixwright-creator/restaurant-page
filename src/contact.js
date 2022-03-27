@@ -1,4 +1,4 @@
-import Logo from './la-cabeza-logo.png';
+import Logo3 from './la-cabeza-logo.png';
 
 export default function contact(){
     const main = document.createElement('div');
@@ -10,7 +10,7 @@ export default function contact(){
     const logoImg = new Image();
     logoImg.alt = 'Logo of the restaurant';
     logoImg.id = 'restaurant-logo';
-    logoImg.src = Logo;
+    logoImg.src = Logo3;
     logoDiv.appendChild(logoImg);
   
     const restaurantName = document.createElement('h1');
