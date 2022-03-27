@@ -1,2 +1,6 @@
 # restaurant-page
-restuarant page with webpack bundles
+restaurant page with webpack bundles
+
+Live preview : https://phoenixwright-creator.github.io/restaurant-page/
+
+
