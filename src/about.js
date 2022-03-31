@@ -1,5 +1,4 @@
 import Cooker from './cooker.jpg';
-import Logo2 from './la-cabeza-logo.png';
 
 export default function about(){
     const main = document.createElement('div');

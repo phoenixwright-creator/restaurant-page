@@ -1,5 +1,3 @@
-import Logo4 from './la-cabeza-logo.png';
-
 export default function menu(){
     const main = document.createElement('div');
     main.id = 'main';

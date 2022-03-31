@@ -1,4 +1,3 @@
-import Logo3 from './la-cabeza-logo.png';
 
 export default function contact(){
     const main = document.createElement('div');
