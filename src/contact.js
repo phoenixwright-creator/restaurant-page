@@ -4,51 +4,6 @@ export default function contact(){
     const main = document.createElement('div');
     main.id = 'main';
 
-    const logoDiv = document.createElement('div');
-    logoDiv.id = 'logo-space';
-  
-    const logoImg = new Image();
-    logoImg.alt = 'Logo of the restaurant';
-    logoImg.id = 'restaurant-logo';
-    logoImg.src = Logo3;
-    logoDiv.appendChild(logoImg);
-  
-    const restaurantName = document.createElement('h1');
-    restaurantName.id = 'restaurant-name';
-    restaurantName.innerHTML = 'LA CABEZA';
-    logoDiv.appendChild(restaurantName);
-  
-    main.appendChild(logoDiv);
-    
-    const headerLinks = document.createElement('div');
-    headerLinks.id = 'header-links';
-
-    const homeLink = document.createElement('a');
-    homeLink.rel = 'noopener noreferrer';
-    homeLink.id = 'home';
-    homeLink.innerHTML = 'HOME';
-    headerLinks.appendChild(homeLink);
-  
-    const aboutLink = document.createElement('a');
-    aboutLink.rel = 'noopener noreferrer';
-    aboutLink.id = 'about';
-    aboutLink.innerHTML = 'ABOUT';
-    headerLinks.appendChild(aboutLink);
-  
-    const menuLink = document.createElement('a');
-    menuLink.rel = 'noopener noreferrer';
-    menuLink.id = 'menu';
-    menuLink.innerHTML = 'MENU';
-    headerLinks.appendChild(menuLink);
-  
-    const contactLink = document.createElement('a');
-    contactLink.rel = 'noopener noreferrer';
-    contactLink.id = 'contact';
-    contactLink.innerHTML = 'CONTACT US';
-    headerLinks.appendChild(contactLink);
-
-    main.appendChild(headerLinks);
-
     const contactTitle = document.createElement('h1');
     contactTitle.id = 'contact-title';
     contactTitle.innerHTML = 'How To Contact Us';
@@ -59,10 +14,8 @@ export default function contact(){
     contactPara.innerHTML = 'Please fill in this form to send us your request';
     main.appendChild(contactPara);
 
-    const contactForm = document.createElement('form');
+    const contactForm = document.createElement('div');
     contactForm.id = 'contact-form';
-    //contactForm.method = '';
-    //contactForm.action = '';
     main.appendChild(contactForm);
 
     const objectLabel = document.createElement('label');
@@ -71,9 +24,11 @@ export default function contact(){
     contactForm.appendChild(objectLabel);
 
     const objectInput = document.createElement('input');
-    objectInput.type = 'text';
     objectInput.id = 'object';
-    objectInput.placeholder = 'Type the object of your message...';
+    objectInput.type = 'text';
+    objectInput.name = 'object';
+    objectInput.placeholder = 'Type an object...';
+    objectInput.value = '';
     contactForm.appendChild(objectInput);
 
     const messageLabel = document.createElement('label');
@@ -83,12 +38,14 @@ export default function contact(){
 
     const messageInput = document.createElement('textarea');
     messageInput.id = 'message';
-    messageInput.placeholder = 'Type your message...';
+    messageInput.name = 'message';
+    messageInput.value = '';
+    messageInput.placeholder = 'Type a message...';
     contactForm.appendChild(messageInput);
 
     const submitBtn = document.createElement('button');
     submitBtn.type = 'submit';
-    submitBtn.id = 'submit-message';
+    submitBtn.id = 'submit';
     submitBtn.innerHTML = 'Submit Message';
     contactForm.appendChild(submitBtn);
 
